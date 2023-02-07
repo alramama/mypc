@@ -1,0 +1,31 @@
+import glob
+import os
+#def convertToBinaryData(filename):
+    # Convert digital data to binary format
+    #with open(filename, 'rb') as file:
+        #binaryData = file.read()
+    #return binaryData
+def insertBLOB():
+    file = os.listdir("E:/Desktop all/Desktop 09-2020/تقرير عمل/Attachment")
+    for i in file:
+        #print(i)
+
+        file_id =1
+        file_name = str(i).replace(".pdf","")
+        print(file_name)
+        photo = "D:\Python\Articles\my_SQL\images\eric_photo.png"
+        biodataFile = "D:\Python\Articles\my_SQL\images\eric_bioData.txt"
+        #print("Inserting BLOB into python_employee table")
+        #cursor = connection.cursor()
+        sql = " INSERT INTO python_employee(id, name, photo, biodata) VALUES (%s,%s,%s,%s)"
+        #empPicture = convertToBinaryData(photo)
+        #file = convertToBinaryData(biodataFile)
+        #insert_blob_tuple = (file_id, file_name, empPicture, file)
+        #result = cursor.execute(sql, insert_blob_tuple)
+        #connection.commit()
+        #print("Image and file inserted successfully as a BLOB into python_employee table", result)
+
+
+insertBLOB()
+
+
